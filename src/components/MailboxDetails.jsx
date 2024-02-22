@@ -15,7 +15,14 @@ const MailboxDetails = (props) => {
 
       <section>
         <h2>Details</h2>
-        <p>Boxholder: {selectedBox.boxholder}</p>
+        <p>Boxholders: {selectedBox.boxholder}</p>
+        <ul>
+          Boxholders:
+          {selectedBox.boxholders.map((boxholder, idx) => (
+            <li key={idx}>{boxholder}</li>
+          ))}
+
+        </ul>
         <p>Box Size: {selectedBox.boxSize}</p>
       </section>
 

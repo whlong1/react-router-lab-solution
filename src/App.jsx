@@ -9,7 +9,7 @@ import MailboxDetails from "./components/MailboxDetails";
 import LetterForm from "./components/LetterForm";
 
 const mailboxObjectExample = {
-  _id: 0, boxSize: "Small", boxholder: "Alex",
+  _id: 0, boxSize: "Small", boxholders: ["Alex"],
 };
 
 const App = () => {
