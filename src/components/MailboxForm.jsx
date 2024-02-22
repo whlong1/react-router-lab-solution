@@ -1,21 +1,21 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MailboxForm = (props) => {
-  const navigate = useNavigate()
-  const initialState = { boxholder: "", boxSize: "Small", }
-  const [formData, setFormData] = useState(initialState)
+  const navigate = useNavigate();
+  const initialState = { boxholder: "", boxSize: "Small" };
+  const [formData, setFormData] = useState(initialState);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    props.addBox(formData)
-    setFormData(initialState)
-    navigate("/mailboxes")
-  }
+    e.preventDefault();
+    props.addBox(formData);
+    setFormData(initialState);
+    navigate("/mailboxes");
+  };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   return (
     <main>
@@ -46,10 +46,10 @@ const MailboxForm = (props) => {
           <option value="Medium">Medium</option>
           <option value="Large">Large</option>
         </select>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </main>
-  )
-}
+  );
+};
 
-export default MailboxForm
+export default MailboxForm;
