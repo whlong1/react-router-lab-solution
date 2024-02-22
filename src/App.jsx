@@ -12,14 +12,25 @@ import MailboxForm from "./components/MailboxForm";
 import MailboxList from "./components/MailboxList";
 import MailboxDetails from "./components/MailboxDetails";
 
+const mailboxObjectExample = {
+  _id: 0, boxSize: "Small", boxholder: "Alex",
+}
+
 const App = () => {
-  const [mailboxes, setMailboxes] = useState([])
+  const [mailboxes, setMailboxes] = useState([
+    mailboxObjectExample
+  ])
+  const [letters, setLetters] = useState([])
 
   const addBox = (boxData) => {
     boxData._id = mailboxes.length
     setMailboxes([...mailboxes, boxData])
   }
 
+  const addLetter = (letterData) => {
+    letterData._id = letterData.length
+    setLetters([...letters, letterData])
+  }
 
   return (
     <>
@@ -28,8 +39,14 @@ const App = () => {
         <Route path="/" element={<h1>Post Office</h1>} />
         <Route path="/new-mailbox" element={<MailboxForm addBox={addBox} />} />
         <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes} />} />
-        <Route path="/mailboxes/:mailboxId" element={<MailboxDetails mailboxes={mailboxes} />} />
-        <Route path="/new-letter" element={<LetterForm />} />
+
+        <Route path="/mailboxes/:mailboxId" element={
+          <MailboxDetails mailboxes={mailboxes} letters={letters} />
+        } />
+
+        <Route path="/new-letter" element={
+          <LetterForm addLetter={addLetter} mailboxes={mailboxes} />
+        } />
       </Routes>
     </>
   )
