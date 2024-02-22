@@ -6,26 +6,27 @@ import Nav from "./components/Nav";
 import MailboxForm from "./components/MailboxForm";
 import MailboxList from "./components/MailboxList";
 import MailboxDetails from "./components/MailboxDetails";
+import LetterForm from "./components/LetterForm";
 
 const mailboxObjectExample = {
   _id: 0, boxSize: "Small", boxholder: "Alex",
-}
+};
 
 const App = () => {
   const [mailboxes, setMailboxes] = useState([
     mailboxObjectExample
-  ])
-  const [letters, setLetters] = useState([])
+  ]);
+  const [letters, setLetters] = useState([]);
 
   const addBox = (boxData) => {
-    boxData._id = mailboxes.length
-    setMailboxes([...mailboxes, boxData])
-  }
+    boxData._id = mailboxes.length;
+    setMailboxes([...mailboxes, boxData]);
+  };
 
   const addLetter = (letterData) => {
-    letterData._id = letterData.length
-    setLetters([...letters, letterData])
-  }
+    letterData._id = letters.length;;
+    setLetters([...letters, letterData]);
+  };
 
   return (
     <>

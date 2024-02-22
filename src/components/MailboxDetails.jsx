@@ -6,17 +6,19 @@ const MailboxDetails = (props) => {
   const selectedLetters = props.letters.filter((letter) => letter.mailboxId === Number(mailboxId));
 
   if (!selectedBox) {
-    return <main><h1>Mailbox Not Found</h1></main>;
+    return <main><h1>Mailbox Not Found!</h1></main>;
   }
 
   return (
     <main>
       <h1>Mailbox {selectedBox._id}</h1>
+
       <section>
         <h2>Details</h2>
         <p>Boxholder: {selectedBox.boxholder}</p>
         <p>Box Size: {selectedBox.boxSize}</p>
       </section>
+
       <section>
         <h2>Letters</h2>
         <ul>
@@ -27,8 +29,8 @@ const MailboxDetails = (props) => {
             </li>
           ))}
         </ul>
-
       </section>
+
     </main>
   );
 };
