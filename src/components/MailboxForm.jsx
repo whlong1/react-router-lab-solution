@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const initialState = { boxholder: "", boxSize: "Small" };
+
 const MailboxForm = (props) => {
   const navigate = useNavigate();
-  const initialState = { boxholder: "", boxSize: "Small" };
   const [formData, setFormData] = useState(initialState);
 
   const handleSubmit = (e) => {
