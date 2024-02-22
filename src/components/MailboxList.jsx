@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const MailboxList = (props) => {
   return (
@@ -14,7 +14,7 @@ const MailboxList = (props) => {
         ))}
       </ul>
     </main>
-  )
-}
+  );
+};
 
-export default MailboxList
+export default MailboxList;

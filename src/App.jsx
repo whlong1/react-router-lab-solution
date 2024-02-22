@@ -3,11 +3,6 @@ import { useState } from "react";
 
 // components
 import Nav from "./components/Nav";
-
-// Level up:
-import LetterForm from "./components/LetterForm";
-
-// Core content:
 import MailboxForm from "./components/MailboxForm";
 import MailboxList from "./components/MailboxList";
 import MailboxDetails from "./components/MailboxDetails";
@@ -49,8 +44,7 @@ const App = () => {
         } />
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;
