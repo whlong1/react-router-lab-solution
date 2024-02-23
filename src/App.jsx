@@ -2,14 +2,14 @@ import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
 // components
-import Nav from "./components/Nav";
-import MailboxForm from "./components/MailboxForm";
-import MailboxList from "./components/MailboxList";
-import MailboxDetails from "./components/MailboxDetails";
-import LetterForm from "./components/LetterForm";
+import NavBar from './components/NavBar';
+import MailboxForm from './components/MailboxForm';
+import MailboxList from './components/MailboxList';
+import MailboxDetails from './components/MailboxDetails';
+import LetterForm from './components/LetterForm';
 
 const mailboxObjectExample = {
-  _id: 0, boxSize: "Small", boxholder: "Alex",
+  _id: 0, boxSize: 'Small', boxholder: 'Alex',
 };
 
 const App = () => {
@@ -30,9 +30,9 @@ const App = () => {
 
   return (
     <>
-      <Nav />
+      <NavBar />
       <Routes>
-        <Route path="/" element={<h1>Post Office</h1>} />
+        <Route path="/" element={<main><h1>Post Office</h1></main>} />
         <Route path="/new-mailbox" element={<MailboxForm addBox={addBox} />} />
         <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes} />} />
 
