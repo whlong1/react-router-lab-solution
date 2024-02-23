@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 
 // components
 import NavBar from './components/NavBar';
@@ -32,15 +32,15 @@ const App = () => {
     <>
       <NavBar />
       <Routes>
-        <Route path="/" element={<main><h1>Post Office</h1></main>} />
-        <Route path="/new-mailbox" element={<MailboxForm addBox={addBox} />} />
-        <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes} />} />
+        <Route path='/' element={<main><h1>Post Office</h1></main>} />
+        <Route path='/new-mailbox' element={<MailboxForm addBox={addBox} />} />
+        <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes} />} />
 
-        <Route path="/mailboxes/:mailboxId" element={
+        <Route path='/mailboxes/:mailboxId' element={
           <MailboxDetails mailboxes={mailboxes} letters={letters} />
         } />
 
-        <Route path="/new-letter" element={
+        <Route path='/new-letter' element={
           <LetterForm addLetter={addLetter} mailboxes={mailboxes} />
         } />
       </Routes>
