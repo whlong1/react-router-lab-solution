@@ -28,17 +28,18 @@ const LetterForm = (props) => {
     <main>
       <h1>New Letter</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor='mailboxId'>Select a PO Box</label>
+        
+        <label htmlFor='mailboxId'>Select a Mailbox</label>
         <select name='mailboxId' id='mailboxId' value={formData.mailboxId} onChange={handleChange}>
           {props.mailboxes.map((mailbox) => (
             <option key={mailbox._id} value={mailbox._id}>
-              PO Box {mailbox._id}
+              Mailbox {mailbox._id}
             </option>
           ))}
         </select>
 
         <label htmlFor='recipient'>
-          Enter the name of the recipient
+          Recipient
         </label>
         <input
           required
@@ -48,9 +49,8 @@ const LetterForm = (props) => {
           placeholder='Recipient name'
           onChange={handleChange}
         />
-
         <label htmlFor='message'>
-          Enter your message:
+          Message
         </label>
         <textarea
           required

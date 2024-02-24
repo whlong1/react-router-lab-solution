@@ -23,7 +23,7 @@ const MailboxForm = (props) => {
       <h1>New Mailbox</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor='boxholder'>
-          Enter a Box Holder Name:
+          Enter a Boxholder:
         </label>
         <input
           required

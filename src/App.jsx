@@ -13,14 +13,16 @@ const mailboxObjectExample = {
 };
 
 const App = () => {
+
   const [mailboxes, setMailboxes] = useState([
     mailboxObjectExample
   ]);
+
   const [letters, setLetters] = useState([]);
 
-  const addBox = (boxData) => {
-    boxData._id = mailboxes.length;
-    setMailboxes([...mailboxes, boxData]);
+  const addBox = (mailboxData) => {
+    mailboxData._id = mailboxes.length;
+    setMailboxes([...mailboxes, mailboxData]);
   };
 
   const addLetter = (letterData) => {
